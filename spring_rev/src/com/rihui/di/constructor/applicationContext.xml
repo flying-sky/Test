@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean name="person" class="com.rihui.di.constructor.Person">
+		<constructor-arg value="25"></constructor-arg>
+		<constructor-arg value="abcdefg"></constructor-arg>
+		<constructor-arg ref="student"></constructor-arg>
+	</bean>
+
+	<bean name="student" class="com.rihui.di.constructor.Student"></bean>
+
+</beans>

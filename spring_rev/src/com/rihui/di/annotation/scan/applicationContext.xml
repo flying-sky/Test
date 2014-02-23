@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<!-- 
+		base-package="com.rihui.di.annotation.scan":扫描该包及其子包下的所有类
+		如果@component中没有属性值，则默认将类的第一个字母小写，其他部分不变，作为bean的名称
+		如果@component中有属性值，则将属性值作为bean的id
+		
+		1、扫描子组件，即@Component标记的类
+		
+		2、扫描@Resource、@Autowired、...等标记的属性
+		
+		3、将2、属性与1中比配并注入
+		
+	 -->
+	<context:component-scan base-package="com.rihui.di.annotation.scan"></context:component-scan>
+
+</beans>

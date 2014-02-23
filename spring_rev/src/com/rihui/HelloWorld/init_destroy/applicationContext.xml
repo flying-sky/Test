@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- 
+		init-method="init":创建对象后执行
+		destroy-method="destroy"：销毁对象方法
+		scope="prototype"：设置为多例后spring容器不再负责对象的销毁，在获取对象时创建对象
+	 -->
+	<bean name="helloWorld" class="com.rihui.HelloWorld.init_destroy.HelloWorld" init-method="init" destroy-method="destroy" scope="prototype"></bean>
+
+</beans>

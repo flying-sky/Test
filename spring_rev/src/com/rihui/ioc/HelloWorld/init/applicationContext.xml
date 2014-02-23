@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- 
+		lazy-init="true":在获取对象时才创建对象，
+		默认情况下在spring容器启动时(即创建时)初始化所有bean
+	 -->
+	<bean name="helloWorld" class="com.rihui.ioc.HelloWorld.init.HelloWorld" lazy-init="true"></bean>
+
+
+</beans>
+
